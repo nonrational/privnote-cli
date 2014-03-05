@@ -1,0 +1,15 @@
+{
+  "name": "privnote-cli",
+  "description": "nodejs wrapper for privnote.com",
+  "version": "0.0.1",
+  "maintainers": [
+    {
+      "name": "Alan Norton",
+      "email": "me@alannorton.com",
+      "web": ""
+    }
+  ],
+  "dependencies": {
+    "cheerio": "0.13.1"
+  }
+}
