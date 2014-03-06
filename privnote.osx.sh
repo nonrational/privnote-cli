@@ -1,3 +1,6 @@
 #!/bin/bash
+# simple example bash wrapper with clipboard support
 
-node privnote-cli.js "$@"
+cd $HOME/src/privnote-cli
+url=$(node privnote-cli.js "$@")
+echo $url | pbcopy && echo $url
