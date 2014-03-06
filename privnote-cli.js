@@ -4,25 +4,40 @@ var GibberishAES = require("./gibberish-aes.js"),
     cheerio = require('cheerio'),
     fs = require('fs');
 
-try{
+function usage(){ console.error(
+"Usage:\n\tnode privnote-cli.js <note>\n\techo <note> | node privnote-cli.js\n\
+\tnode privnote-cli.js << EOF\n\
+\t\t<note-part-1>\n\
+\t\t<note-part-2>\n\
+\tEOF"
+);}
+
+try {
+
     args = process.argv
-    args.shift()
-    args.shift()
+
+    while(!!args[0] && (!!args[0].match(/node/) || !!args[0].match(/privnote-cli.js/))){
+        args.shift()
+    }
 
     if(args.length == 0) {
+
         var content = '';
         process.stdin.resume();
         process.stdin.on('data', function(buf) { content += buf.toString(); });
         process.stdin.on('end', function() {
             sendPrivNote(content);
         });
+
     } else {
         sendPrivNote(args.join(' '));
     }
-}catch(err){
+
+} catch(err) {
     console.error("You must provide your message as an argument or through stdin.");
-    // console.error(err.stack);
+    console.error(err);
 }
+
 
 function random_string(C) {
     if (C === null) {
@@ -42,6 +57,12 @@ function cipher(A, B) {
 }
 
 function sendPrivNote(note){
+    if (note === "") {
+        usage()
+        process.exit()
+    }
+    // console.log("note=" + note);
+
     var key = random_string(null),
         enc = cipher(key, note);
 
