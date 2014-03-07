@@ -79,10 +79,9 @@ function sendPrivNote(note){
         method: 'POST',
         headers: {
             'Content-Length': post_data.length,
-            "Cookie": "sessionid=a323ded53f943af9eb9e1595428d18f7;",
             "Origin": "https://privnote.com",
             "Accept-Language": "en-US,en;q=0.8",
-            "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.146 Safari/537.36",
+            "User-Agent": "privnote-cli/0.0.1 (https://github.com/nonrational/privnote-cli)",
             "Content-Type": "application/x-www-form-urlencoded",
             "Accept": "application/json, text/javascript, */*",
             "Referer": "https://privnote.com/",
