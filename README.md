@@ -1,4 +1,3 @@
-
 # **privnote-cli**: 
 _the power of [privnote.com](https://privnote.com) in your terminal_
 
@@ -31,3 +30,12 @@ EOF
 ```
 
 After invocation, the privnote url will be printed at the commandline. If you use the bash wrapper for osx, it will also be copied to your clipboard.
+
+### Installation
+
+1. `git clone https://github.com/nonrational/privnote-cli.git ~/src/privnote-cli`
+2. `cd ~/src/privnote-cli`
+3. `git submodule update --init --recursive`
+4. `npm install`
+5. `echo "alias privnote=\"~/src/privnote-cli/privnote.osx.sh\"" >> ~/.profile`
+6. `source ~/.profile`
