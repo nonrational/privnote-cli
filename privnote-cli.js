@@ -1,4 +1,4 @@
-var GibberishAES = require("./gibberish-aes.js"),
+var GibberishAES = require("./node_modules/gibberish-aes/dist/gibberish-aes-1.0.0"),
     querystring = require('querystring'),
     https = require('https'),
     cheerio = require('cheerio'),
