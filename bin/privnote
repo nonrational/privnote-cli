@@ -13,7 +13,7 @@ cli.setApp("privnote-cli", "0.0.2");
 cli.parse();
 cli.withStdin(function(note) {
     if(note.trim() === ''){
-        this.error("Empty note specified. Aborting.")
+        this.error("Empty note specified. Aborting.");
         this.exit(1);
     }
     privnote.crypt(note);
