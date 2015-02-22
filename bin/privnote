@@ -7,6 +7,8 @@ process.title = 'privnote';
 // Internal libs.
 var privnote = require('../lib/privnote-cli');
 
-require('cli').withStdinLines(function(lines, newline) {
-    privnote.crypt(lines.join("\n"));
+var cli = require('cli'), options = cli.parse();
+
+cli.withStdin(function(note) {
+    privnote.crypt(note);
 });
