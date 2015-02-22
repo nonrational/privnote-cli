@@ -7,8 +7,14 @@ process.title = 'privnote';
 // Internal libs.
 var privnote = require('../lib/privnote-cli');
 
-var cli = require('cli'), options = cli.parse();
+var cli = require('cli').enable("help", "version");
+cli.setApp("privnote-cli", "0.0.2");
 
+cli.parse();
 cli.withStdin(function(note) {
+    if(note.trim() === ''){
+        this.error("Empty note specified. Aborting.")
+        this.exit(1);
+    }
     privnote.crypt(note);
 });
