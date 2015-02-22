@@ -1,0 +1,12 @@
+#!/usr/bin/env node
+
+'use strict';
+
+process.title = 'privnote';
+
+// Internal libs.
+var privnote = require('../lib/privnote-cli');
+
+require('cli').withStdinLines(function(lines, newline) {
+    privnote.crypt(lines.join("\n"));
+});
