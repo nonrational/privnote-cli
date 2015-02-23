@@ -39,12 +39,3 @@ https://privnote.com/n/abcdefghijklmnop/#qrstuvwxyz123456
 $ privnote < secrets.txt
 https://privnote.com/n/abcdefghijklmnop/#qrstuvwxyz123456
 ```
-
-### Installation
-
-1. `git clone https://github.com/nonrational/privnote-cli.git ~/src/privnote-cli`
-2. `cd ~/src/privnote-cli`
-3. `git submodule update --init --recursive`
-4. `npm install`
-5. `echo "alias privnote=\"~/src/privnote-cli/privnote.osx.sh\"" >> ~/.profile`
-6. `source ~/.profile`
