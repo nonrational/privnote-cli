@@ -1,4 +1,4 @@
-# **privnote-cli**:
+# **privnote-cli**
 _the power of [privnote.com](https://privnote.com) in your terminal_
 
 #### [privnote.com](https://privnote.com): Send notes that will self-destruct after being read.
@@ -9,7 +9,7 @@ Privnote allows you to create one-time-pad encrypted, burn-after-reading notes o
 
 ```bash
 npm install -g privnote-cli
-# nodenv rehash # if you're using nodenv
+# don't forget to `nodenv rehash` if you're using nodenv
 ```
 
 ### Usage
@@ -25,15 +25,16 @@ the narwhal bacons at midnight.
 https://privnote.com/n/abcdefghijklmnop/#qrstuvwxyz123456
 ```
 
-#### Pass your note via stdin. (Be sure to clear your shell history.)
+#### Pipe the output of a command to privnote.
+
+Be sure to clear your shell history (`$HISTFILE`) if you included secrets in your command.
 
 ```
-$ echo "the rain in spain stays mainly in the plain" | privnote
+$ ruby <(echo 'require "securerandom"; print "#{SecureRandom.urlsafe_base64(12)}\n";') | privnote
 https://privnote.com/n/abcdefghijklmnop/#qrstuvwxyz123456
-
 ```
 
-#### pass files directly via redirection
+#### Privnote files directly via input redirection.
 
 ```
 $ privnote < secrets.txt
