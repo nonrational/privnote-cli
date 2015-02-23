@@ -1,12 +1,12 @@
 {
   "name": "privnote-cli",
   "description": "nodejs wrapper for privnote.com",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "maintainers": [
     {
       "name": "Alan Norton",
       "email": "me@alannorton.com",
-      "web": "https://github.com/nonrational/privnote-cli/tree/npm"
+      "web": "https://github.com/nonrational/privnote-cli"
     }
   ],
   "bin": {
