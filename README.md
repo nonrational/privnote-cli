@@ -1,4 +1,4 @@
-# **privnote-cli** ![](https://travis-ci.org/nonrational/privnote-cli.svg)
+# **privnote-cli** [![Build Status](https://secure.travis-ci.org/nonrational/privnote-cli.svg?branch=master)](http://travis-ci.org/nonrational/privnote-cli)
 _the power of [privnote.com](https://privnote.com) in your terminal_
 
 #### [privnote.com](https://privnote.com): Send notes that will self-destruct after being read.
