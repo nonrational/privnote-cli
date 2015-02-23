@@ -8,7 +8,7 @@ process.title = 'privnote';
 var privnote = require('../lib/privnote-cli');
 
 var cli = require('cli').enable("help", "version");
-cli.setApp("privnote-cli", "0.0.5");
+cli.setApp("privnote-cli", "0.0.7");
 
 cli.parse();
 cli.withStdin(function(note) {
