@@ -1,7 +1,7 @@
 {
   "name": "privnote-cli",
   "description": "nodejs wrapper for privnote.com",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "maintainers": [
     {
       "name": "Alan Norton",
