@@ -4,6 +4,8 @@
 
 process.title = 'privnote';
 
+var clipboard = require("copy-paste");
+
 // Internal libs.
 var privnote = require('../lib/privnote-cli');
 
@@ -12,9 +14,14 @@ cli.setApp("privnote-cli", require('../package.json').version);
 
 cli.parse();
 cli.withStdin(function(note) {
+    var self = this;
+
     if(note.trim() === ''){
         this.error("Empty note specified. Aborting.");
         this.exit(1);
     }
-    privnote.crypt(note);
+    privnote.crypt(note, function(link){
+        clipboard.copy(link);
+        self.output(link + '\n');
+    });
 });

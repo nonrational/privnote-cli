@@ -14,6 +14,8 @@ npm install -g privnote-cli
 
 ### Usage
 
+You bring the plaintext; `privnote` will print the link to stdout _and_ the clipboard.
+
 #### Type directly into stdin a la `gpg`. (Recommended)
 
 ```
@@ -39,4 +41,10 @@ https://privnote.com/n/abcdefghijklmnop/#qrstuvwxyz123456
 ```
 $ privnote < secrets.txt
 https://privnote.com/n/abcdefghijklmnop/#qrstuvwxyz123456
+```
+
+
+##### Releasing
+
+```
 ```

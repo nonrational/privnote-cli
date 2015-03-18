@@ -15,7 +15,8 @@
   "dependencies": {
     "cli": "0.6.5",
     "cheerio": "0.13.1",
-    "gibberish-aes": "1.0.0"
+    "gibberish-aes": "1.0.0",
+    "copy-paste" : "1.0.2"
   },
   "devDependencies": {
     "grunt": "^0.4.5",
