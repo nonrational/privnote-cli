@@ -47,4 +47,10 @@ https://privnote.com/n/abcdefghijklmnop/#qrstuvwxyz123456
 ##### Releasing
 
 ```
+echo "doh! i forgot the releasing section" >> README.md
+git add --all
+git commit -m"added the releasing section, bc i'm forgetful."
+npm version patch
+git push origin master
+npm publish
 ```
