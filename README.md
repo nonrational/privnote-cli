@@ -43,6 +43,9 @@ $ privnote < secrets.txt
 https://privnote.com/n/abcdefghijklmnop/#qrstuvwxyz123456
 ```
 
+#### Release History
+
+v0.0.11 - Fixed compatibility with Privnote Ver. 1.0-41-g038c13a
 
 ##### Releasing
 
