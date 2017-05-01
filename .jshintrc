@@ -1,5 +1,6 @@
 {
   "boss": true,
+  "esnext": true,
   "curly": true,
   "eqeqeq": true,
   "immed": true,

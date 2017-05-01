@@ -4,24 +4,24 @@
 
 process.title = 'privnote';
 
-var clipboard = require("copy-paste");
+const clipboard = require("copy-paste");
 
 // Internal libs.
-var privnote = require('../lib/privnote-cli');
+const privnote = require('../lib/privnote-cli');
 
-var cli = require('cli').enable("help", "version");
+const cli = require('cli').enable("help", "version");
+
 cli.setApp("privnote-cli", require('../package.json').version);
-
 cli.parse();
 cli.withStdin(function(note) {
-    var self = this;
+    note = note.trim();
 
-    if(note.trim() === ''){
+    if(note === ''){
         this.error("Empty note specified. Aborting.");
         this.exit(1);
     }
     privnote.crypt(note, function(link){
         clipboard.copy(link);
-        self.output(link + '\n');
+        console.log(link + '\n');
     });
 });

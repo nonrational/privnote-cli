@@ -15,8 +15,8 @@ module.exports = function(grunt) {
   grunt.initConfig({
     jshint: {
       all: [
-        'bin/*',
-        'lib/**/*.js',
+        'bin/privnote',
+        'lib/privnote-cli.js',
         'Gruntfile.js'
       ],
       options: {
