@@ -1,7 +1,9 @@
 {
   "name": "privnote-cli",
   "description": "nodejs wrapper for privnote.com",
-  "version": "0.0.11",
+  "version": "0.1.0",
+  "license": "MIT",
+  "repository": "https://github.com/nonrational/privnote-cli",
   "maintainers": [
     {
       "name": "Alan Norton",
@@ -13,12 +15,14 @@
     "privnote": "bin/privnote"
   },
   "dependencies": {
-    "cli": "0.6.5",
+    "cli": "^1.0.1",
+    "copy-paste": "1.0.2",
     "gibberish-aes": "1.0.0",
-    "copy-paste": "1.0.2"
+    "minimatch": "^3.0.3"
   },
   "devDependencies": {
     "grunt": "^0.4.5",
+    "grunt-cli": "^1.2.0",
     "grunt-contrib-jshint": "^0.11.0"
   },
   "preferGlobal": true
