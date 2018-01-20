@@ -32,7 +32,7 @@ https://privnote.com/n/abcdefghijklmnop/#qrstuvwxyz123456
 Be sure to clear your shell history (`$HISTFILE`) if you included secrets in your command.
 
 ```
-$ ruby <(echo 'require "securerandom"; print "#{SecureRandom.urlsafe_base64(12)}\n";') | privnote
+$ ruby -e 'require "securerandom"; print "#{SecureRandom.urlsafe_base64(12)}\n";' | privnote
 https://privnote.com/n/abcdefghijklmnop/#qrstuvwxyz123456
 ```
 
