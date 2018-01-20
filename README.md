@@ -32,7 +32,7 @@ https://privnote.com/n/abcdefghijklmnop/#qrstuvwxyz123456
 Be sure to clear your shell history (`$HISTFILE`) if you included secrets in your command.
 
 ```
-$ ruby <(echo 'require "securerandom"; print "#{SecureRandom.urlsafe_base64(12)}\n";') | privnote
+$ ruby -e 'require "securerandom"; print "#{SecureRandom.urlsafe_base64(12)}\n";' | privnote
 https://privnote.com/n/abcdefghijklmnop/#qrstuvwxyz123456
 ```
 
@@ -45,7 +45,8 @@ https://privnote.com/n/abcdefghijklmnop/#qrstuvwxyz123456
 
 #### Release History
 
-v0.0.11 - Fixed compatibility with Privnote Ver. 1.0-41-g038c13a
+v0.1.0 - Default to "no-ask" mode & provide --ask flag, upgrade to Privnote Ver. 1.1-24-gffcdb2d
+v0.0.12 - Fixed compatibility with Privnote Ver. 1.0-41-g038c13a
 
 ##### Releasing
 

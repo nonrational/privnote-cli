@@ -12,15 +12,20 @@ const privnote = require('../lib/privnote-cli');
 const cli = require('cli').enable("help", "version");
 
 cli.setApp("privnote-cli", require('../package.json').version);
-cli.parse();
-cli.withStdin(function(note) {
-    note = note.trim();
+
+const options = cli.parse({
+    "ask": ['a', "Ask for confirmation before showing & destroying the note", "boolean", false]
+});
+
+cli.withStdin(function(lines) {
+    const note = lines.trim();
 
     if(note === ''){
         this.error("Empty note specified. Aborting.");
         this.exit(1);
     }
-    privnote.crypt(note, function(link){
+
+    privnote.crypt(note, options, function(link){
         clipboard.copy(link);
         console.log(link + '\n');
     });
