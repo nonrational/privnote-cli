@@ -3,7 +3,7 @@ _the power of [privnote.com](https://privnote.com) in your terminal_
 
 #### [privnote.com](https://privnote.com): Send notes that will self-destruct after being read.
 
-Privnote allows you to create and share encrypted, burn-after-reading notes over the internet. It's a great way to share passwords or other sensitive peices of information. But, you have to use a web browser! Or, should I say, _had_ to.
+Privnote.com allows you to create encrypted, burn-after-reading notes over the internet. `privnote-cli` allows you generate privnote links at the commandline. After you create a note, send the link to your intended recipient to open in a browser.
 
 ### Installation
 
